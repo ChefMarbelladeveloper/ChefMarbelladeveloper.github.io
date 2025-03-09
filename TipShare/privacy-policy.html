@@ -1,179 +1,247 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>TipShare - Privacy Policy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TipShare Privacy Policy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #1976d2;
-            --text-color: #333;
-            --background-color: #f5f5f5;
-            --card-background: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
         body {
-            background-color: var(--background-color);
-            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background: #f9fafb;
         }
-
-        .language-selector {
+        .home-button {
             position: fixed;
-            top: 1rem;
-            right: 1rem;
-            display: flex;
-            gap: 0.5rem;
-            z-index: 1000;
-        }
-
-        .button {
-            padding: 0.5rem 1rem;
-            background-color: var(--primary-color);
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #2563eb;
             color: white;
             text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: background-color 0.3s;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1000;
         }
-
-        .button:hover {
-            background-color: #1565c0;
+        .home-button:hover {
+            background: #1e40af;
         }
-
-        .container {
+        .language-section {
             max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-        }
-
-        .content {
-            background-color: var(--card-background);
-            border-radius: 8px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 2rem;
+            display: none; /* Hide all sections by default */
         }
-
+        .language-section.active {
+            display: block; /* Show only active section */
+        }
+        h1, h2 {
+            color: #2563eb;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
         .section {
-            display: none;
-            animation: fadeIn 0.3s ease-in;
+            margin-bottom: 30px;
         }
-
-        .section.active {
-            display: block;
+        ul {
+            padding-left: 20px;
         }
-
-        .privacy-title {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-
-        .privacy-card {
-            background-color: var(--card-background);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .privacy-subtitle {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .privacy-text {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="language-selector">
-        <a href="#" class="button" onclick="changeLanguage('en')">EN</a>
-        <a href="#" class="button" onclick="changeLanguage('es')">ES</a>
-        <a href="#" class="button" onclick="changeLanguage('fr')">FR</a>
+    <a href="/" class="home-button">
+        <i class="fas fa-home"></i>
+        Home
+    </a>
+
+    <!-- English Privacy Policy -->
+    <div class="language-section" id="en">
+        <h1>Privacy Policy</h1>
+        
+        <div class="section">
+            <h2>1. Information Collection</h2>
+            <p>We collect the following information to provide and improve our service:</p>
+            <ul>
+                <li>Employee names and contact information</li>
+                <li>Business details</li>
+                <li>Tip distribution data</li>
+                <li>Usage statistics</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Data Usage</h2>
+            <p>Your data is used for:</p>
+            <ul>
+                <li>Managing tip distributions</li>
+                <li>Sending notifications</li>
+                <li>Generating reports</li>
+                <li>Improving our service</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Data Protection</h2>
+            <p>We protect your data through:</p>
+            <ul>
+                <li>Encryption of sensitive information</li>
+                <li>Secure data storage</li>
+                <li>Regular security updates</li>
+                <li>Access controls</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access your data</li>
+                <li>Request data deletion</li>
+                <li>Export your data</li>
+                <li>Update your information</li>
+            </ul>
+        </div>
     </div>
-    <div class="container">
-        <main class="content">
-            <section id="privacy-en" class="section en-content privacy-section">
-                <h2 class="privacy-title">Privacy Policy</h2>
-                <div class="privacy-card">
-                    <h3 class="privacy-subtitle">Data Collection and Usage</h3>
-                    <p class="privacy-text">TipShare is committed to protecting your privacy. We only collect essential information necessary for the application to function.</p>
-                    <p class="privacy-text">The information we collect includes employee names and tip amounts, which are used solely for tip calculation and distribution purposes.</p>
-                </div>
-                <div class="privacy-card">
-                    <h3 class="privacy-subtitle">Data Storage</h3>
-                    <p class="privacy-text">All data is stored locally on your device. We do not store any personal information on external servers.</p>
-                </div>
-                <div class="privacy-card">
-                    <h3 class="privacy-subtitle">Notifications</h3>
-                    <p class="privacy-text">SMS and WhatsApp messages are sent directly through your device's messaging apps. We do not store or transmit message content.</p>
-                </div>
-            </section>
-            
-            <section id="privacy-es" class="section es-content privacy-section">
-                <h2 class="privacy-title">Política de Privacidad</h2>
-                <div class="privacy-card">
-                    <h3 class="privacy-subtitle">Recopilación y Uso de Datos</h3>
-                    <p class="privacy-text">TipShare está comprometido con la protección de tu privacidad. Solo recopilamos información esencial necesaria para el funcionamiento de la aplicación.</p>
-                    <p class="privacy-text">La información que recopilamos incluye nombres de empleados y montos de propinas, que se utilizan únicamente para fines de cálculo y distribución de propinas.</p>
-                </div>
-                <div class="privacy-card">
-                    <h3 class="privacy-subtitle">Almacenamiento de Datos</h3>
-                    <p class="privacy-text">Todos los datos se almacenan localmente en tu dispositivo. No almacenamos ninguna información personal en servidores externos.</p>
-                </div>
-                <div class="privacy-card">
-                    <h3 class="privacy-subtitle">Notificaciones</h3>
-                    <p class="privacy-text">Los mensajes SMS y WhatsApp se envían directamente a través de las aplicaciones de mensajería de tu dispositivo. No almacenamos ni transmitimos el contenido de los mensajes.</p>
-                </div>
-            </section>
-            
-            <section id="privacy-fr" class="section fr-content privacy-section">
-                <h2 class="privacy-title">Politique de Confidentialité</h2>
-                <div class="privacy-card">
-                    <h3 class="privacy-subtitle">Collecte et Utilisation des Données</h3>
-                    <p class="privacy-text">TipShare s'engage à protéger votre vie privée. Nous ne collectons que les informations essentielles nécessaires au fonctionnement de l'application.</p>
-                    <p class="privacy-text">Les informations que nous collectons comprennent les noms des employés et les montants des pourboires, qui sont utilisés uniquement à des fins de calcul et de distribution des pourboires.</p>
-                </div>
-                <div class="privacy-card">
-                    <h3 class="privacy-subtitle">Stockage des Données</h3>
-                    <p class="privacy-text">Toutes les données sont stockées localement sur votre appareil. Nous ne stockons aucune information personnelle sur des serveurs externes.</p>
-                </div>
-                <div class="privacy-card">
-                    <h3 class="privacy-subtitle">Notifications</h3>
-                    <p class="privacy-text">Les messages SMS et WhatsApp sont envoyés directement via les applications de messagerie de votre appareil. Nous ne stockons ni ne transmettons le contenu des messages.</p>
-                </div>
-            </section>
-        </main>
+
+    <!-- Spanish Privacy Policy -->
+    <div class="language-section" id="es">
+        <h1>Política de Privacidad</h1>
+        
+        <div class="section">
+            <h2>1. Recopilación de Información</h2>
+            <p>Recopilamos la siguiente información para proporcionar y mejorar nuestro servicio:</p>
+            <ul>
+                <li>Nombres y datos de contacto de empleados</li>
+                <li>Detalles del negocio</li>
+                <li>Datos de distribución de propinas</li>
+                <li>Estadísticas de uso</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Uso de Datos</h2>
+            <p>Sus datos se utilizan para:</p>
+            <ul>
+                <li>Gestionar distribuciones de propinas</li>
+                <li>Enviar notificaciones</li>
+                <li>Generar informes</li>
+                <li>Mejorar nuestro servicio</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Protección de Datos</h2>
+            <p>Protegemos sus datos mediante:</p>
+            <ul>
+                <li>Cifrado de información sensible</li>
+                <li>Almacenamiento seguro de datos</li>
+                <li>Actualizaciones regulares de seguridad</li>
+                <li>Controles de acceso</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Sus Derechos</h2>
+            <p>Usted tiene derecho a:</p>
+            <ul>
+                <li>Acceder a sus datos</li>
+                <li>Solicitar la eliminación de datos</li>
+                <li>Exportar sus datos</li>
+                <li>Actualizar su información</li>
+            </ul>
+        </div>
     </div>
+
+    <!-- French Privacy Policy -->
+    <div class="language-section" id="fr">
+        <h1>Politique de Confidentialité</h1>
+        
+        <div class="section">
+            <h2>1. Collecte d'Informations</h2>
+            <p>Nous collectons les informations suivantes pour fournir et améliorer notre service:</p>
+            <ul>
+                <li>Noms et coordonnées des employés</li>
+                <li>Détails de l'entreprise</li>
+                <li>Données de distribution des pourboires</li>
+                <li>Statistiques d'utilisation</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Utilisation des Données</h2>
+            <p>Vos données sont utilisées pour:</p>
+            <ul>
+                <li>Gérer les distributions de pourboires</li>
+                <li>Envoyer des notifications</li>
+                <li>Générer des rapports</li>
+                <li>Améliorer notre service</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Protection des Données</h2>
+            <p>Nous protégeons vos données par:</p>
+            <ul>
+                <li>Cryptage des informations sensibles</li>
+                <li>Stockage sécurisé des données</li>
+                <li>Mises à jour régulières de sécurité</li>
+                <li>Contrôles d'accès</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Vos Droits</h2>
+            <p>Vous avez le droit de:</p>
+            <ul>
+                <li>Accéder à vos données</li>
+                <li>Demander la suppression des données</li>
+                <li>Exporter vos données</li>
+                <li>Mettre à jour vos informations</li>
+            </ul>
+        </div>
+    </div>
+
     <script>
-        function changeLanguage(lang) {
-            document.querySelectorAll('.section').forEach(section => {
+        function updateContent(lang) {
+            // Hide all sections
+            document.querySelectorAll('.language-section').forEach(section => {
                 section.classList.remove('active');
             });
-            document.getElementById(`privacy-${lang}`).classList.add('active');
+            
+            // Show selected section
+            const selectedSection = document.getElementById(lang);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
         }
-        
-        // Set default language based on browser language
-        const userLang = navigator.language || navigator.userLanguage;
-        const defaultLang = userLang.startsWith('es') ? 'es' : 
-                          userLang.startsWith('fr') ? 'fr' : 'en';
-        changeLanguage(defaultLang);
+
+        // Initialize with saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('tipshare-language') || 'es';
+            updateContent(savedLanguage);
+            document.documentElement.lang = savedLanguage;
+        });
+
+        // Listen for language changes
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'tipshare-language') {
+                updateContent(e.newValue);
+                document.documentElement.lang = e.newValue;
+            }
+        });
     </script>
 </body>
 </html>
