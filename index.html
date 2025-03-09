@@ -204,31 +204,22 @@
 </head>
 <body>
     <div class="container">
-        <a href="https://chefmarbelladeveloper.github.io/" class="home-link">
-            <div class="logo">
-                <i class="fas fa-calculator"></i>
-            </div>
-            
-            <h1>TipShare</h1>
-            <p class="subtitle">Documentation and Resources</p>
-        </a>
+        <div class="logo">
+            <i class="fas fa-calculator"></i>
+        </div>
+        
+        <h1>TipShare</h1>
+        <p class="subtitle">Documentation and Resources</p>
         
         <nav class="navigation">
-            <a href="https://chefmarbelladeveloper.github.io/" class="nav-link home-link">
-                <i class="fas fa-home"></i>
-                <div class="text">
-                    <div class="title">Home</div>
-                    <div class="description">Return to the main page</div>
-                </div>
-            </a>
-            <a href="https://chefmarbelladeveloper.github.io/TipShare/docs.html" class="nav-link">
+            <a href="TipShare/docs.html" class="nav-link">
                 <i class="fas fa-book"></i>
                 <div class="text">
                     <div class="title">Documentation</div>
                     <div class="description">User guide, tutorials, and API reference</div>
                 </div>
             </a>
-            <a href="https://chefmarbelladeveloper.github.io/TipShare/privacy-policy.html" class="nav-link">
+            <a href="TipShare/privacy-policy.html" class="nav-link">
                 <i class="fas fa-shield-alt"></i>
                 <div class="text">
                     <div class="title">Privacy Policy</div>
@@ -305,12 +296,10 @@
             document.querySelector('.subtitle').textContent = t.title;
             
             const links = document.querySelectorAll('.nav-link');
-            links[0].querySelector('.title').textContent = t.home;
-            links[0].querySelector('.description').textContent = t.homeDesc;
-            links[1].querySelector('.title').textContent = t.docs;
-            links[1].querySelector('.description').textContent = t.docsDesc;
-            links[2].querySelector('.title').textContent = t.privacy;
-            links[2].querySelector('.description').textContent = t.privacyDesc;
+            links[0].querySelector('.title').textContent = t.docs;
+            links[0].querySelector('.description').textContent = t.docsDesc;
+            links[1].querySelector('.title').textContent = t.privacy;
+            links[1].querySelector('.description').textContent = t.privacyDesc;
         }
 
         // Initialize with saved language preference
