@@ -1,181 +1,34 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>TipShare - Documentation Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TipShare Documentation</title>
     <style>
-        :root {
-            --primary-color: #1976d2;
-            --text-color: #333;
-            --background-color: #f5f5f5;
-            --card-background: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .language-selector {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            display: flex;
-            gap: 0.5rem;
-            z-index: 1000;
-        }
-
-        .button {
-            padding: 0.5rem 1rem;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .button:hover {
-            background-color: #1565c0;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-        }
-
-        .content {
-            background-color: var(--card-background);
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .section {
-            display: none;
-            animation: fadeIn 0.3s ease-in;
-        }
-
-        .section.active {
-            display: block;
-        }
-
-        .welcome-title {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 2.5rem;
-        }
-
-        .welcome-subtitle {
-            color: var(--text-color);
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
-        }
-
-        .buttons-container {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .main-button {
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            min-width: 200px;
-        }
-
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 2rem;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+        /* ... existing styles ... */
     </style>
 </head>
 <body>
-    <div class="language-selector">
-        <a href="#" class="button" onclick="changeLanguage('en')">EN</a>
-        <a href="#" class="button" onclick="changeLanguage('es')">ES</a>
-        <a href="#" class="button" onclick="changeLanguage('fr')">FR</a>
-    </div>
     <div class="container">
-        <main class="content">
-            <section id="welcome-en" class="section">
-                <div class="logo">TS</div>
-                <h1 class="welcome-title">Welcome to TipShare</h1>
-                <p class="welcome-subtitle">Your complete solution for tip management and distribution</p>
-                <div class="buttons-container">
-                    <a href="docs.html" class="button main-button">Documentation</a>
-                    <a href="privacy-policy.html" class="button main-button">Privacy Policy</a>
-                </div>
-            </section>
+        <h1>TipShare Documentation</h1>
+        
+        <div class="nav-links">
+            <a href="TipShare/docs.html">Documentation / Documentación / Documentation</a>
+            <a href="TipShare/privacy-policy.html">Privacy Policy / Política de Privacidad / Politique de Confidentialité</a>
+        </div>
 
-            <section id="welcome-es" class="section">
-                <div class="logo">TS</div>
-                <h1 class="welcome-title">Bienvenido a TipShare</h1>
-                <p class="welcome-subtitle">Tu solución completa para la gestión y distribución de propinas</p>
-                <div class="buttons-container">
-                    <a href="docs.html" class="button main-button">Documentación</a>
-                    <a href="privacy-policy.html" class="button main-button">Política de Privacidad</a>
-                </div>
-            </section>
-
-            <section id="welcome-fr" class="section">
-                <div class="logo">TS</div>
-                <h1 class="welcome-title">Bienvenue sur TipShare</h1>
-                <p class="welcome-subtitle">Votre solution complète pour la gestion et la distribution des pourboires</p>
-                <div class="buttons-container">
-                    <a href="docs.html" class="button main-button">Documentation</a>
-                    <a href="privacy-policy.html" class="button main-button">Politique de Confidentialité</a>
-                </div>
-            </section>
-        </main>
+        <div class="language-selector">
+            <a href="#" onclick="changeLanguage('en')">English</a> |
+            <a href="#" onclick="changeLanguage('es')">Español</a> |
+            <a href="#" onclick="changeLanguage('fr')">Français</a>
+        </div>
     </div>
+
     <script>
         function changeLanguage(lang) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(`welcome-${lang}`).classList.add('active');
+            // Aquí se implementará el cambio de idioma en el futuro
+            console.log('Changing language to: ' + lang);
         }
-        
-        // Set default language based on browser language
-        const userLang = navigator.language || navigator.userLanguage;
-        const defaultLang = userLang.startsWith('es') ? 'es' : 
-                          userLang.startsWith('fr') ? 'fr' : 'en';
-        changeLanguage(defaultLang);
     </script>
 </body>
 </html>
