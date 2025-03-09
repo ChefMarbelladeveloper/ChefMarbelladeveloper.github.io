@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>TipShare - Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1976d2;
+            --text-color: #333;
+            --background-color: #f5f5f5;
+            --card-background: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .language-selector {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            z-index: 1000;
+        }
+
+        .button {
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #1565c0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .content {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .docs-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .docs-card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .docs-subtitle {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .docs-text {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .feature-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selector">
+        <a href="#" class="button" onclick="changeLanguage('en')">EN</a>
+        <a href="#" class="button" onclick="changeLanguage('es')">ES</a>
+        <a href="#" class="button" onclick="changeLanguage('fr')">FR</a>
+    </div>
+    <div class="container">
+        <main class="content">
+            <section id="docs-en" class="section en-content docs-section">
+                <h2 class="docs-title">TipShare Documentation</h2>
+                <div class="docs-card">
+                    <h3 class="docs-subtitle">Getting Started</h3>
+                    <p class="docs-text">TipShare is an intuitive application designed to help manage and distribute tips among employees. Here's how to get started:</p>
+                    <ul class="feature-list">
+                        <li>Add employees and their roles</li>
+                        <li>Enter the total tip amount</li>
+                        <li>Configure distribution percentages</li>
+                        <li>Generate and share reports</li>
+                    </ul>
+                </div>
+                <div class="docs-card">
+                    <h3 class="docs-subtitle">Key Features</h3>
+                    <ul class="feature-list">
+                        <li>Automatic tip calculation</li>
+                        <li>Multiple distribution methods</li>
+                        <li>SMS and WhatsApp notifications</li>
+                        <li>Detailed reports and history</li>
+                    </ul>
+                </div>
+                <div class="docs-card">
+                    <h3 class="docs-subtitle">Support</h3>
+                    <p class="docs-text">For additional support or questions, please contact us through the app's help section.</p>
+                </div>
+            </section>
+            
+            <section id="docs-es" class="section es-content docs-section">
+                <h2 class="docs-title">Documentación de TipShare</h2>
+                <div class="docs-card">
+                    <h3 class="docs-subtitle">Primeros Pasos</h3>
+                    <p class="docs-text">TipShare es una aplicación intuitiva diseñada para ayudar a gestionar y distribuir propinas entre empleados. Así puedes empezar:</p>
+                    <ul class="feature-list">
+                        <li>Añade empleados y sus roles</li>
+                        <li>Introduce el monto total de propinas</li>
+                        <li>Configura los porcentajes de distribución</li>
+                        <li>Genera y comparte informes</li>
+                    </ul>
+                </div>
+                <div class="docs-card">
+                    <h3 class="docs-subtitle">Características Principales</h3>
+                    <ul class="feature-list">
+                        <li>Cálculo automático de propinas</li>
+                        <li>Múltiples métodos de distribución</li>
+                        <li>Notificaciones por SMS y WhatsApp</li>
+                        <li>Informes detallados e historial</li>
+                    </ul>
+                </div>
+                <div class="docs-card">
+                    <h3 class="docs-subtitle">Soporte</h3>
+                    <p class="docs-text">Para soporte adicional o preguntas, contáctanos a través de la sección de ayuda de la aplicación.</p>
+                </div>
+            </section>
+            
+            <section id="docs-fr" class="section fr-content docs-section">
+                <h2 class="docs-title">Documentation TipShare</h2>
+                <div class="docs-card">
+                    <h3 class="docs-subtitle">Pour Commencer</h3>
+                    <p class="docs-text">TipShare est une application intuitive conçue pour aider à gérer et distribuer les pourboires entre les employés. Voici comment commencer:</p>
+                    <ul class="feature-list">
+                        <li>Ajoutez des employés et leurs rôles</li>
+                        <li>Saisissez le montant total des pourboires</li>
+                        <li>Configurez les pourcentages de distribution</li>
+                        <li>Générez et partagez des rapports</li>
+                    </ul>
+                </div>
+                <div class="docs-card">
+                    <h3 class="docs-subtitle">Fonctionnalités Principales</h3>
+                    <ul class="feature-list">
+                        <li>Calcul automatique des pourboires</li>
+                        <li>Plusieurs méthodes de distribution</li>
+                        <li>Notifications SMS et WhatsApp</li>
+                        <li>Rapports détaillés et historique</li>
+                    </ul>
+                </div>
+                <div class="docs-card">
+                    <h3 class="docs-subtitle">Support</h3>
+                    <p class="docs-text">Pour plus d'assistance ou des questions, contactez-nous via la section d'aide de l'application.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(`docs-${lang}`).classList.add('active');
+        }
+        
+        // Set default language based on browser language
+        const userLang = navigator.language || navigator.userLanguage;
+        const defaultLang = userLang.startsWith('es') ? 'es' : 
+                          userLang.startsWith('fr') ? 'fr' : 'en';
+        changeLanguage(defaultLang);
+    </script>
+</body>
+</html>
