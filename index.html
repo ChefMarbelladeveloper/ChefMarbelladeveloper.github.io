@@ -4,30 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TipShare Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* ... existing styles ... */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f6f7f9 0%, #ffffff 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 3rem;
+            margin: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 1.25rem;
+            background: var(--light-bg);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .nav-link:hover {
+            background: var(--white);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-link i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+
+        .nav-link .text {
+            flex: 1;
+        }
+
+        .nav-link .title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .nav-link .description {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .language-selector {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 2rem;
+        }
+
+        .language-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border: none;
+            background: none;
+            color: #6b7280;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .language-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .language-btn i {
+            margin-right: 0.5rem;
+        }
+
+        .language-btn.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-link {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>TipShare Documentation</h1>
+        <div class="logo">
+            <i class="fas fa-calculator"></i>
+        </div>
+        
+        <h1>TipShare</h1>
+        <p class="subtitle">Documentation and Resources</p>
         
         <div class="nav-links">
-            <a href="TipShare/docs.html">Documentation / Documentación / Documentation</a>
-            <a href="TipShare/privacy-policy.html">Privacy Policy / Política de Privacidad / Politique de Confidentialité</a>
+            <a href="TipShare/docs.html" class="nav-link">
+                <i class="fas fa-book"></i>
+                <div class="text">
+                    <div class="title">Documentation</div>
+                    <div class="description">User guide, tutorials, and API reference</div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <a href="TipShare/privacy-policy.html" class="nav-link">
+                <i class="fas fa-shield-alt"></i>
+                <div class="text">
+                    <div class="title">Privacy Policy</div>
+                    <div class="description">Learn about data protection and privacy</div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </a>
         </div>
 
         <div class="language-selector">
-            <a href="#" onclick="changeLanguage('en')">English</a> |
-            <a href="#" onclick="changeLanguage('es')">Español</a> |
-            <a href="#" onclick="changeLanguage('fr')">Français</a>
+            <button onclick="changeLanguage('en')" class="language-btn active">
+                <i class="fas fa-globe"></i>English
+            </button>
+            <span class="separator">|</span>
+            <button onclick="changeLanguage('es')" class="language-btn">
+                <i class="fas fa-globe"></i>Español
+            </button>
+            <span class="separator">|</span>
+            <button onclick="changeLanguage('fr')" class="language-btn">
+                <i class="fas fa-globe"></i>Français
+            </button>
         </div>
     </div>
 
     <script>
         function changeLanguage(lang) {
-            // Aquí se implementará el cambio de idioma en el futuro
-            console.log('Changing language to: ' + lang);
+            // Remove active class from all buttons
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to selected language button
+            document.querySelector(`.language-btn[onclick*="${lang}"]`).classList.add('active');
+            
+            // Here you would implement the language change logic
+            console.log('Changing language to:', lang);
         }
     </script>
 </body>
