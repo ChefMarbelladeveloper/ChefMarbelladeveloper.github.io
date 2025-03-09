@@ -1,204 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TipShare Documentation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --text-color: #1f2937;
-            --light-bg: #f3f4f6;
-            --white: #ffffff;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
+// ... existing code ...
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background: linear-gradient(135deg, #f6f7f9 0%, #ffffff 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
-
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background: var(--white);
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            padding: 3rem;
-            margin: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-        }
-
-        .logo {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .logo i {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: var(--text-color);
-            text-align: center;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #6b7280;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
-
-        .nav-links {
-            display: grid;
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .nav-link {
-            display: flex;
-            align-items: center;
-            padding: 1.25rem;
-            background: var(--light-bg);
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-color);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .nav-link:hover {
-            background: var(--white);
-            border-color: var(--primary-color);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-
-        .nav-link i {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            margin-right: 1rem;
-        }
-
-        .nav-link .text {
-            flex: 1;
-        }
-
-        .nav-link .title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .nav-link .description {
-            color: #6b7280;
-            font-size: 0.9rem;
-        }
-
-        .language-selector {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #e5e7eb;
-            margin-top: 2rem;
-        }
-
-        .language-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            border: none;
-            background: none;
-            color: #6b7280;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .language-btn:hover {
-            color: var(--primary-color);
-        }
-
-        .language-btn i {
-            margin-right: 0.5rem;
-        }
-
-        .language-btn.active {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .separator {
-            color: #e5e7eb;
-            margin: 0 0.5rem;
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                padding: 2rem;
-                margin: 1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .nav-link {
-                padding: 1rem;
-            }
-        }
-
-        .home-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .home-link:hover {
-            transform: translateY(-2px);
-        }
-        
-        .home-link:hover .logo i {
-            color: var(--secondary-color);
-        }
-    </style>
-</head>
 <body>
     <div class="container">
-        <a href="/" class="home-link">
+        <a href="/ChefMarbelladeveloper.github.io/" class="home-link">
             <div class="logo">
                 <i class="fas fa-calculator"></i>
             </div>
@@ -208,7 +14,7 @@
         </a>
         
         <div class="nav-links">
-            <a href="/" class="nav-link">
+            <a href="/ChefMarbelladeveloper.github.io/" class="nav-link">
                 <i class="fas fa-home"></i>
                 <div class="text">
                     <div class="title">Home</div>
@@ -217,7 +23,7 @@
                 <i class="fas fa-chevron-right"></i>
             </a>
 
-            <a href="/TipShare/docs.html" class="nav-link">
+            <a href="/ChefMarbelladeveloper.github.io/TipShare/docs.html" class="nav-link">
                 <i class="fas fa-book"></i>
                 <div class="text">
                     <div class="title">Documentation</div>
@@ -226,7 +32,7 @@
                 <i class="fas fa-chevron-right"></i>
             </a>
             
-            <a href="/TipShare/privacy-policy.html" class="nav-link">
+            <a href="/ChefMarbelladeveloper.github.io/TipShare/privacy-policy.html" class="nav-link">
                 <i class="fas fa-shield-alt"></i>
                 <div class="text">
                     <div class="title">Privacy Policy</div>
@@ -236,87 +42,8 @@
             </a>
         </div>
 
-        <div class="language-selector">
-            <button onclick="changeLanguage('en')" class="language-btn">
-                <i class="fas fa-globe"></i>English
-            </button>
-            <span class="separator">|</span>
-            <button onclick="changeLanguage('es')" class="language-btn">
-                <i class="fas fa-globe"></i>Español
-            </button>
-            <span class="separator">|</span>
-            <button onclick="changeLanguage('fr')" class="language-btn">
-                <i class="fas fa-globe"></i>Français
-            </button>
-        </div>
+        // ... rest of the existing code ...
     </div>
-
-    <script>
-        function changeLanguage(lang) {
-            // Save language preference
-            localStorage.setItem('tipshare-language', lang);
-            
-            // Update buttons
-            document.querySelectorAll('.language-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.querySelector(`.language-btn[onclick*="${lang}"]`).classList.add('active');
-            
-            // Update HTML lang attribute
-            document.documentElement.lang = lang;
-
-            // Update text content based on language
-            updateContent(lang);
-        }
-
-        function updateContent(lang) {
-            const translations = {
-                en: {
-                    title: 'Documentation and Resources',
-                    home: 'Home',
-                    homeDesc: 'Return to the main page',
-                    docs: 'Documentation',
-                    docsDesc: 'User guide, tutorials, and API reference',
-                    privacy: 'Privacy Policy',
-                    privacyDesc: 'Learn about data protection and privacy'
-                },
-                es: {
-                    title: 'Documentación y Recursos',
-                    home: 'Inicio',
-                    homeDesc: 'Volver a la página principal',
-                    docs: 'Documentación',
-                    docsDesc: 'Guía de usuario, tutoriales y referencia de API',
-                    privacy: 'Política de Privacidad',
-                    privacyDesc: 'Información sobre protección de datos y privacidad'
-                },
-                fr: {
-                    title: 'Documentation et Ressources',
-                    home: 'Accueil',
-                    homeDesc: 'Retour à la page principale',
-                    docs: 'Documentation',
-                    docsDesc: 'Guide utilisateur, tutoriels et référence API',
-                    privacy: 'Politique de Confidentialité',
-                    privacyDesc: 'En savoir plus sur la protection des données et la confidentialité'
-                }
-            };
-
-            const t = translations[lang];
-            document.querySelector('.subtitle').textContent = t.title;
-            
-            const links = document.querySelectorAll('.nav-link');
-            links[0].querySelector('.title').textContent = t.home;
-            links[0].querySelector('.description').textContent = t.homeDesc;
-            links[1].querySelector('.title').textContent = t.docs;
-            links[1].querySelector('.description').textContent = t.docsDesc;
-            links[2].querySelector('.title').textContent = t.privacy;
-            links[2].querySelector('.description').textContent = t.privacyDesc;
-        }
-
-        // Initialize with saved language preference
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedLanguage = localStorage.getItem('tipshare-language') || 'es';
-            changeLanguage(savedLanguage);
-        });
-    </script>
+    // ... rest of the existing code ...
 </body>
 </html>
