@@ -1,228 +1,421 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>TipShare - Documentation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TipShare Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #1976d2;
-            --text-color: #333;
-            --background-color: #f5f5f5;
-            --card-background: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
         body {
-            background-color: var(--background-color);
-            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
         }
-
-        .language-selector {
+        .home-button {
             position: fixed;
-            top: 1rem;
-            right: 1rem;
-            display: flex;
-            gap: 0.5rem;
-            z-index: 1000;
-        }
-
-        .button {
-            padding: 0.5rem 1rem;
-            background-color: var(--primary-color);
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #2563eb;
             color: white;
             text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: background-color 0.3s;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-
-        .button:hover {
-            background-color: #1565c0;
+        .home-button:hover {
+            background: #1e40af;
         }
-
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
+        .language-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 5px;
         }
-
-        .content {
-            background-color: var(--card-background);
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 2rem;
+        h1, h2, h3 {
+            color: #2563eb;
         }
-
-        .section {
-            display: none;
-            animation: fadeIn 0.3s ease-in;
-        }
-
-        .section.active {
-            display: block;
-        }
-
-        .docs-title {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-
-        .docs-card {
-            background-color: var(--card-background);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .docs-subtitle {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .docs-text {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
         .feature-list {
-            list-style-type: none;
-            padding-left: 1rem;
+            list-style: none;
+            padding: 0;
         }
-
         .feature-list li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 10px;
+            padding-left: 24px;
             position: relative;
-            padding-left: 1.5rem;
         }
-
-        .feature-list li::before {
-            content: "•";
-            color: var(--primary-color);
+        .feature-list li:before {
+            content: "→";
             position: absolute;
             left: 0;
-            font-weight: bold;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            color: #2563eb;
         }
     </style>
 </head>
 <body>
-    <div class="language-selector">
-        <a href="#" class="button" onclick="changeLanguage('en')">EN</a>
-        <a href="#" class="button" onclick="changeLanguage('es')">ES</a>
-        <a href="#" class="button" onclick="changeLanguage('fr')">FR</a>
+    <a href="/" class="home-button">
+        <i class="fas fa-home"></i>
+        Home
+    </a>
+
+    <!-- English Documentation -->
+    <div class="language-section" id="en">
+        <h1>TipShare Documentation</h1>
+
+        <h2>1. Getting Started</h2>
+        <h3>1.1 First Steps</h3>
+        <ul class="feature-list">
+            <li>Download TipShare from the Google Play Store</li>
+            <li>Open the app and complete the initial setup</li>
+            <li>Configure your business information</li>
+            <li>Start adding your employees</li>
+        </ul>
+
+        <h3>1.2 Employee Management</h3>
+        <ul class="feature-list">
+            <li><strong>Adding Employees:</strong>
+                <ul>
+                    <li>Go to "Employees" section</li>
+                    <li>Click the "+" button</li>
+                    <li>Fill in: Name, Role, Contact Info</li>
+                    <li>Set distribution percentage</li>
+                    <li>Save the employee profile</li>
+                </ul>
+            </li>
+            <li><strong>Editing Employees:</strong>
+                <ul>
+                    <li>Select employee from the list</li>
+                    <li>Click edit icon</li>
+                    <li>Modify necessary information</li>
+                    <li>Save changes</li>
+                </ul>
+            </li>
+            <li><strong>Removing Employees:</strong>
+                <ul>
+                    <li>Select employee</li>
+                    <li>Click delete icon</li>
+                    <li>Confirm deletion</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>2. Tip Management</h2>
+        <h3>2.1 Calculating Tips</h3>
+        <ul class="feature-list">
+            <li><strong>Daily Tips:</strong>
+                <ul>
+                    <li>Enter total tip amount</li>
+                    <li>Select participating employees</li>
+                    <li>Review automatic distribution</li>
+                    <li>Adjust if necessary</li>
+                    <li>Confirm and save</li>
+                </ul>
+            </li>
+            <li><strong>Custom Distribution:</strong>
+                <ul>
+                    <li>Choose "Custom Distribution"</li>
+                    <li>Set individual percentages</li>
+                    <li>Review total distribution</li>
+                    <li>Save or modify as needed</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>2.2 Notifications</h3>
+        <ul class="feature-list">
+            <li><strong>SMS Setup:</strong>
+                <ul>
+                    <li>Enable SMS notifications</li>
+                    <li>Verify phone numbers</li>
+                    <li>Customize message template</li>
+                </ul>
+            </li>
+            <li><strong>WhatsApp Integration:</strong>
+                <ul>
+                    <li>Enable WhatsApp notifications</li>
+                    <li>Link with WhatsApp Business</li>
+                    <li>Set message preferences</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3. Reports and History</h2>
+        <ul class="feature-list">
+            <li><strong>Generating Reports:</strong>
+                <ul>
+                    <li>Daily summaries</li>
+                    <li>Weekly reports</li>
+                    <li>Monthly statistics</li>
+                    <li>Custom date ranges</li>
+                </ul>
+            </li>
+            <li><strong>Exporting Data:</strong>
+                <ul>
+                    <li>PDF format</li>
+                    <li>Excel/CSV export</li>
+                    <li>Email sharing</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>4. Troubleshooting</h2>
+        <ul class="feature-list">
+            <li><strong>Common Issues:</strong>
+                <ul>
+                    <li>Notification failures: Check internet connection and phone numbers</li>
+                    <li>Calculation errors: Verify percentages total 100%</li>
+                    <li>App crashes: Update to latest version</li>
+                </ul>
+            </li>
+            <li><strong>Data Backup:</strong>
+                <ul>
+                    <li>Enable auto-backup</li>
+                    <li>Manual backup process</li>
+                    <li>Data restoration steps</li>
+                </ul>
+            </li>
+        </ul>
     </div>
-    <div class="container">
-        <main class="content">
-            <section id="docs-en" class="section en-content docs-section">
-                <h2 class="docs-title">TipShare Documentation</h2>
-                <div class="docs-card">
-                    <h3 class="docs-subtitle">Getting Started</h3>
-                    <p class="docs-text">TipShare is an intuitive application designed to help manage and distribute tips among employees. Here's how to get started:</p>
-                    <ul class="feature-list">
-                        <li>Add employees and their roles</li>
-                        <li>Enter the total tip amount</li>
-                        <li>Configure distribution percentages</li>
-                        <li>Generate and share reports</li>
-                    </ul>
-                </div>
-                <div class="docs-card">
-                    <h3 class="docs-subtitle">Key Features</h3>
-                    <ul class="feature-list">
-                        <li>Automatic tip calculation</li>
-                        <li>Multiple distribution methods</li>
-                        <li>SMS and WhatsApp notifications</li>
-                        <li>Detailed reports and history</li>
-                    </ul>
-                </div>
-                <div class="docs-card">
-                    <h3 class="docs-subtitle">Support</h3>
-                    <p class="docs-text">For additional support or questions, please contact us through the app's help section.</p>
-                </div>
-            </section>
-            
-            <section id="docs-es" class="section es-content docs-section">
-                <h2 class="docs-title">Documentación de TipShare</h2>
-                <div class="docs-card">
-                    <h3 class="docs-subtitle">Primeros Pasos</h3>
-                    <p class="docs-text">TipShare es una aplicación intuitiva diseñada para ayudar a gestionar y distribuir propinas entre empleados. Así puedes empezar:</p>
-                    <ul class="feature-list">
-                        <li>Añade empleados y sus roles</li>
-                        <li>Introduce el monto total de propinas</li>
-                        <li>Configura los porcentajes de distribución</li>
-                        <li>Genera y comparte informes</li>
-                    </ul>
-                </div>
-                <div class="docs-card">
-                    <h3 class="docs-subtitle">Características Principales</h3>
-                    <ul class="feature-list">
-                        <li>Cálculo automático de propinas</li>
-                        <li>Múltiples métodos de distribución</li>
-                        <li>Notificaciones por SMS y WhatsApp</li>
-                        <li>Informes detallados e historial</li>
-                    </ul>
-                </div>
-                <div class="docs-card">
-                    <h3 class="docs-subtitle">Soporte</h3>
-                    <p class="docs-text">Para soporte adicional o preguntas, contáctanos a través de la sección de ayuda de la aplicación.</p>
-                </div>
-            </section>
-            
-            <section id="docs-fr" class="section fr-content docs-section">
-                <h2 class="docs-title">Documentation TipShare</h2>
-                <div class="docs-card">
-                    <h3 class="docs-subtitle">Pour Commencer</h3>
-                    <p class="docs-text">TipShare est une application intuitive conçue pour aider à gérer et distribuer les pourboires entre les employés. Voici comment commencer:</p>
-                    <ul class="feature-list">
-                        <li>Ajoutez des employés et leurs rôles</li>
-                        <li>Saisissez le montant total des pourboires</li>
-                        <li>Configurez les pourcentages de distribution</li>
-                        <li>Générez et partagez des rapports</li>
-                    </ul>
-                </div>
-                <div class="docs-card">
-                    <h3 class="docs-subtitle">Fonctionnalités Principales</h3>
-                    <ul class="feature-list">
-                        <li>Calcul automatique des pourboires</li>
-                        <li>Plusieurs méthodes de distribution</li>
-                        <li>Notifications SMS et WhatsApp</li>
-                        <li>Rapports détaillés et historique</li>
-                    </ul>
-                </div>
-                <div class="docs-card">
-                    <h3 class="docs-subtitle">Support</h3>
-                    <p class="docs-text">Pour plus d'assistance ou des questions, contactez-nous via la section d'aide de l'application.</p>
-                </div>
-            </section>
-        </main>
+
+    <!-- Spanish Documentation -->
+    <div class="language-section" id="es">
+        <h1>Documentación de TipShare</h1>
+
+        <h2>1. Primeros Pasos</h2>
+        <h3>1.1 Inicio</h3>
+        <ul class="feature-list">
+            <li>Descarga TipShare desde Google Play Store</li>
+            <li>Abre la app y completa la configuración inicial</li>
+            <li>Configura la información de tu negocio</li>
+            <li>Comienza a añadir empleados</li>
+        </ul>
+
+        <h3>1.2 Gestión de Empleados</h3>
+        <ul class="feature-list">
+            <li><strong>Añadir Empleados:</strong>
+                <ul>
+                    <li>Ve a la sección "Empleados"</li>
+                    <li>Pulsa el botón "+"</li>
+                    <li>Completa: Nombre, Rol, Información de Contacto</li>
+                    <li>Establece el porcentaje de distribución</li>
+                    <li>Guarda el perfil del empleado</li>
+                </ul>
+            </li>
+            <li><strong>Editar Empleados:</strong>
+                <ul>
+                    <li>Selecciona el empleado de la lista</li>
+                    <li>Pulsa el icono de editar</li>
+                    <li>Modifica la información necesaria</li>
+                    <li>Guarda los cambios</li>
+                </ul>
+            </li>
+            <li><strong>Eliminar Empleados:</strong>
+                <ul>
+                    <li>Selecciona el empleado</li>
+                    <li>Pulsa el icono de eliminar</li>
+                    <li>Confirma la eliminación</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>2. Gestión de Propinas</h2>
+        <h3>2.1 Cálculo de Propinas</h3>
+        <ul class="feature-list">
+            <li><strong>Propinas Diarias:</strong>
+                <ul>
+                    <li>Introduce el monto total de propinas</li>
+                    <li>Selecciona los empleados participantes</li>
+                    <li>Revisa la distribución automática</li>
+                    <li>Ajusta si es necesario</li>
+                    <li>Confirma y guarda</li>
+                </ul>
+            </li>
+            <li><strong>Distribución Personalizada:</strong>
+                <ul>
+                    <li>Elige "Distribución Personalizada"</li>
+                    <li>Establece porcentajes individuales</li>
+                    <li>Revisa la distribución total</li>
+                    <li>Guarda o modifica según necesites</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>2.2 Notificaciones</h3>
+        <ul class="feature-list">
+            <li><strong>Configuración de SMS:</strong>
+                <ul>
+                    <li>Activa las notificaciones SMS</li>
+                    <li>Verifica los números de teléfono</li>
+                    <li>Personaliza la plantilla de mensajes</li>
+                </ul>
+            </li>
+            <li><strong>Integración con WhatsApp:</strong>
+                <ul>
+                    <li>Activa las notificaciones de WhatsApp</li>
+                    <li>Vincula con WhatsApp Business</li>
+                    <li>Configura las preferencias de mensajes</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3. Informes e Historial</h2>
+        <ul class="feature-list">
+            <li><strong>Generar Informes:</strong>
+                <ul>
+                    <li>Resúmenes diarios</li>
+                    <li>Informes semanales</li>
+                    <li>Estadísticas mensuales</li>
+                    <li>Rangos de fecha personalizados</li>
+                </ul>
+            </li>
+            <li><strong>Exportar Datos:</strong>
+                <ul>
+                    <li>Formato PDF</li>
+                    <li>Exportación a Excel/CSV</li>
+                    <li>Compartir por email</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>4. Solución de Problemas</h2>
+        <ul class="feature-list">
+            <li><strong>Problemas Comunes:</strong>
+                <ul>
+                    <li>Fallos en notificaciones: Verifica la conexión a internet y los números de teléfono</li>
+                    <li>Errores de cálculo: Verifica que los porcentajes sumen 100%</li>
+                    <li>Cierres de la app: Actualiza a la última versión</li>
+                </ul>
+            </li>
+            <li><strong>Copia de Seguridad:</strong>
+                <ul>
+                    <li>Activa la copia de seguridad automática</li>
+                    <li>Proceso de copia manual</li>
+                    <li>Pasos para restaurar datos</li>
+                </ul>
+            </li>
+        </ul>
     </div>
-    <script>
-        function changeLanguage(lang) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(`docs-${lang}`).classList.add('active');
-        }
-        
-        // Set default language based on browser language
-        const userLang = navigator.language || navigator.userLanguage;
-        const defaultLang = userLang.startsWith('es') ? 'es' : 
-                          userLang.startsWith('fr') ? 'fr' : 'en';
-        changeLanguage(defaultLang);
-    </script>
+
+    <!-- French Documentation -->
+    <div class="language-section" id="fr">
+        <h1>Documentation TipShare</h1>
+
+        <h2>1. Pour Commencer</h2>
+        <h3>1.1 Premiers Pas</h3>
+        <ul class="feature-list">
+            <li>Téléchargez TipShare depuis le Google Play Store</li>
+            <li>Ouvrez l'application et complétez la configuration initiale</li>
+            <li>Configurez les informations de votre entreprise</li>
+            <li>Commencez à ajouter vos employés</li>
+        </ul>
+
+        <h3>1.2 Gestion des Employés</h3>
+        <ul class="feature-list">
+            <li><strong>Ajouter des Employés:</strong>
+                <ul>
+                    <li>Allez à la section "Employés"</li>
+                    <li>Cliquez sur le bouton "+"</li>
+                    <li>Remplissez: Nom, Rôle, Coordonnées</li>
+                    <li>Définissez le pourcentage de distribution</li>
+                    <li>Sauvegardez le profil de l'employé</li>
+                </ul>
+            </li>
+            <li><strong>Modifier des Employés:</strong>
+                <ul>
+                    <li>Sélectionnez l'employé dans la liste</li>
+                    <li>Cliquez sur l'icône modifier</li>
+                    <li>Modifiez les informations nécessaires</li>
+                    <li>Sauvegardez les changements</li>
+                </ul>
+            </li>
+            <li><strong>Supprimer des Employés:</strong>
+                <ul>
+                    <li>Sélectionnez l'employé</li>
+                    <li>Cliquez sur l'icône supprimer</li>
+                    <li>Confirmez la suppression</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>2. Gestion des Pourboires</h2>
+        <h3>2.1 Calcul des Pourboires</h3>
+        <ul class="feature-list">
+            <li><strong>Pourboires Quotidiens:</strong>
+                <ul>
+                    <li>Entrez le montant total des pourboires</li>
+                    <li>Sélectionnez les employés participants</li>
+                    <li>Vérifiez la distribution automatique</li>
+                    <li>Ajustez si nécessaire</li>
+                    <li>Confirmez et sauvegardez</li>
+                </ul>
+            </li>
+            <li><strong>Distribution Personnalisée:</strong>
+                <ul>
+                    <li>Choisissez "Distribution Personnalisée"</li>
+                    <li>Définissez les pourcentages individuels</li>
+                    <li>Vérifiez la distribution totale</li>
+                    <li>Sauvegardez ou modifiez selon les besoins</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>2.2 Notifications</h3>
+        <ul class="feature-list">
+            <li><strong>Configuration SMS:</strong>
+                <ul>
+                    <li>Activez les notifications SMS</li>
+                    <li>Vérifiez les numéros de téléphone</li>
+                    <li>Personnalisez le modèle de message</li>
+                </ul>
+            </li>
+            <li><strong>Intégration WhatsApp:</strong>
+                <ul>
+                    <li>Activez les notifications WhatsApp</li>
+                    <li>Liez avec WhatsApp Business</li>
+                    <li>Définissez les préférences de messages</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3. Rapports et Historique</h2>
+        <ul class="feature-list">
+            <li><strong>Générer des Rapports:</strong>
+                <ul>
+                    <li>Résumés quotidiens</li>
+                    <li>Rapports hebdomadaires</li>
+                    <li>Statistiques mensuelles</li>
+                    <li>Plages de dates personnalisées</li>
+                </ul>
+            </li>
+            <li><strong>Exporter des Données:</strong>
+                <ul>
+                    <li>Format PDF</li>
+                    <li>Export Excel/CSV</li>
+                    <li>Partage par email</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>4. Dépannage</h2>
+        <ul class="feature-list">
+            <li><strong>Problèmes Courants:</strong>
+                <ul>
+                    <li>Échecs de notification: Vérifiez la connexion internet et les numéros de téléphone</li>
+                    <li>Erreurs de calcul: Vérifiez que les pourcentages totalisent 100%</li>
+                    <li>Plantages de l'application: Mettez à jour vers la dernière version</li>
+                </ul>
+            </li>
+            <li><strong>Sauvegarde des Données:</strong>
+                <ul>
+                    <li>Activez la sauvegarde automatique</li>
+                    <li>Processus de sauvegarde manuelle</li>
+                    <li>Étapes de restauration des données</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
